@@ -1,6 +1,6 @@
 services:
   zammad-nginx:
     volumes:
-      - zammad-backup:/var/tmp/zammad:ro  # needed for waiting on restore operations
-      - zammad-storage:/opt/zammad/storage
+      #- zammad-backup:/var/tmp/zammad:ro  # needed for waiting on restore operations
+      #- zammad-storage:/opt/zammad/storage
       - /data/docker/zammad/nginx/99-origin-fix.conf:/etc/nginx/conf.d/99-origin-fix.conf
