@@ -119,8 +119,8 @@ services:
       - zammad-backup:/var/tmp/zammad:ro  # needed for waiting on restore operations
       - zammad-storage:/opt/zammad/storage
       - type: bind
-        source: ./sourceFile.yaml
-        target: /location/targetFile.yaml
+        source: ./custom-nginx/default.conf
+        target: /etc/nginx/sites-available/default.conf
       #- ./custom-nginx/default.conf:/etc/nginx/sites-available/default.conf
        #fix mobile empty origin end
     expose:
