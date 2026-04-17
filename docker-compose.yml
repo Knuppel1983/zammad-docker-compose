@@ -118,7 +118,7 @@ services:
        #fix mobile empty origin begin, copy volumes from zammad-nginx and add custom default.conf
       - zammad-backup:/var/tmp/zammad:ro  # needed for waiting on restore operations
       - zammad-storage:/opt/zammad/storage
-      - ./custom-nginx/default:/etc/nginx/sites-available/default
+      - ./custom-nginx/default.conf:/etc/nginx/sites-available/default.conf
        #fix mobile empty origin end
     expose:
       - "${NGINX_PORT:-8080}"
