@@ -1,4 +1,4 @@
 services:
   zammad-nginx:
     volumes:
-      - /data/docker/zammad/nginx/99-origin-fix.conf:/etc/nginx/conf.d/99-origin-fix.conf
+      - /data/docker/zammad/nginx/default:/etc/nginx/sites-available/default
