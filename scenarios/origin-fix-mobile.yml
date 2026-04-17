@@ -5,4 +5,4 @@ services:
       #- zammad-storage:/opt/zammad/storage
       #- /data/docker/zammad/nginx/99-origin-fix.conf:/etc/nginx/conf.d/99-origin-fix.conf
       #- /data/docker/zammad/nginx/default:/etc/nginx/sites-enabled/default:rw
-      - /data/docker/zammad/nginx/zammad.conf:contrib/nginx/zammad.conf:ro
+      - /data/docker/zammad/nginx/zammad.conf:/opt/zammad/contrib/nginx/zammad.conf:ro
