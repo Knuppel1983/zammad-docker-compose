@@ -1,0 +1,4 @@
+services:
+  zammad-nginx:
+    volumes:
+      - ./nginx/conf.d/99-origin-fix.conf:/etc/nginx/conf.d/
