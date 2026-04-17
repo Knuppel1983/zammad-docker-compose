@@ -114,6 +114,10 @@ services:
   zammad-nginx:
     <<: *zammad-service
     command: ["zammad-nginx"]
+    volumes:
+      - zammad-backup:/var/tmp/zammad:ro  # needed for waiting on restore operations
+      - zammad-storage:/opt/zammad/storage
+      - /data/docker/zammad/nginx/default:/etc/nginx/sites-available/default
     expose:
       - "${NGINX_PORT:-8080}"
     ports:
